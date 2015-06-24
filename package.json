@@ -1,6 +1,6 @@
 {
   "name": "@blinkmobile/jqpromise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "wrap jQuery.Deferred to make it more like native Promises",
   "main": "index.js",
   "scripts": {
