@@ -2,16 +2,8 @@
 (function (global){
 'use strict';
 
-// foreign modules
-
-var $ = require('jquery') || global.$;
-
-// this module
-
-console.log($.Deferred);
-
 function JQPromise (exec) {
-  var dfrd = new $.Deferred();
+  var dfrd = new (global.$ || require('jquery')).Deferred();
   exec(dfrd.resolve, dfrd.reject);
   return dfrd.promise();
 }
@@ -19,5 +11,5 @@ function JQPromise (exec) {
 module.exports = JQPromise;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"jquery":undefined}]},{},[1])(1)
+},{"jquery":"jquery"}]},{},[1])(1)
 });

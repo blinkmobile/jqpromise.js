@@ -4,7 +4,7 @@
   "description": "wrap jQuery.Deferred to make it more like native Promises",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -s JQPromise -u jquery -e . -o dist/index.js",
+    "build": "browserify -s JQPromise -x jquery -e . -o dist/index.js",
     "pretest": "npm run build",
     "test": "eslint . && karma start"
   },
